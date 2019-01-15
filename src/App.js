@@ -1,28 +1,40 @@
-import React, {Component} from 'react'
+import React from 'react'
+import {renderRoutes} from 'react-router-config'
+
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
+import * as routing from './routing'
+
 import logo from './logo.svg'
 import './App.css'
 
-class App extends Component {
-    render() {
-        return (
-            <div className="App">
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <p>
-                        Edit <code>src/App.js</code> and save to reload.
-                    </p>
-                    <a
-                        className="App-link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Learn React
-                    </a>
-                </header>
-            </div>
-        )
+const App = ({route, actions}) => {
+    return (
+        <div className="App">
+            <header className="App-header">
+                <img src={logo} className="App-logo" alt="logo"/>
+            </header>
+            {renderRoutes(route.routes, {actions})}
+        </div>
+    )
+}
+
+const mapStateToProps = (state, props) => {
+    const {route} = props
+    return {
+        state,
+        route
     }
 }
 
-export default App
+const mapDispatchToProps = (dispatch) => {
+    return {
+        actions: {
+            routing: bindActionCreators(routing, dispatch)
+        }
+    }
+}
+
+const enhance = connect(mapStateToProps, mapDispatchToProps)
+
+export default enhance(App)
