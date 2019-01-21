@@ -3,7 +3,7 @@ import ReactTestRenderer from 'react-test-renderer'
 
 import Link from './Link'
 
-it('renders Link with replace, then click', () => {
+test('renders Link with replace, then click', () => {
     const props = {
         replaceHistory: jest.fn(),
         pushHistory: jest.fn(),
@@ -28,7 +28,7 @@ it('renders Link with replace, then click', () => {
     expect(ev.preventDefault).toHaveBeenCalled()
 })
 
-it('renders Link without replace, then click', () => {
+test('renders Link without replace, then click', () => {
     const props = {
         replaceHistory: jest.fn(),
         pushHistory: jest.fn(),
