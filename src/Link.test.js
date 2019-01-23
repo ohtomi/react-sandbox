@@ -1,7 +1,26 @@
 import React from 'react'
 import ReactTestRenderer from 'react-test-renderer'
+import {shallow} from 'enzyme'
 
 import Link from './Link'
+
+test('renders Link', () => {
+    const props = {
+        replaceHistory: jest.fn(),
+        pushHistory: jest.fn(),
+        replace: true,
+        to: '/abc'
+    }
+    const wrapper = shallow(
+        <Link {...props}>
+            <span>label</span>
+        </Link>
+    )
+
+    expect(wrapper.prop('children')).toBeTruthy()
+    const childSpan = wrapper.prop('children')
+    expect(childSpan.props.children).toBe('label')
+})
 
 test('renders Link with replace, then click', () => {
     const props = {
