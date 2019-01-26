@@ -1,7 +1,7 @@
 import App from './App'
-import Home from './Home'
-import Child from './Child'
-import GrandChild from './GrandChild'
+import Home from './views/pages/Home'
+import Child from './views/pages/Child'
+import GrandChild from './views/pages/GrandChild'
 
 const routes = [
     {

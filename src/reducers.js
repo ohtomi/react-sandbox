@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux'
 
-import routing from './routing'
+import routing from './containers/routing/routing'
 
 export default combineReducers({
     routing

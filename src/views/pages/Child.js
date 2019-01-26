@@ -1,7 +1,7 @@
 import React from 'react'
 import {renderRoutes} from 'react-router-config'
 
-import Link from './Link'
+import Link from '../atoms/Link'
 
 const Child = ({route, match: {params: {id}}, actions}) => {
     return (
