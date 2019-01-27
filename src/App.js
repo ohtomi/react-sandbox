@@ -3,7 +3,7 @@ import {renderRoutes} from 'react-router-config'
 
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
-import * as routing from './containers/routing/routing'
+import * as routing from './containers/routing/reducer'
 
 import logo from './logo.svg'
 import './App.css'
