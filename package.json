@@ -16,11 +16,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "flow": "flow",
     "eject": "react-scripts eject"
   },
   "dependencies": {
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
+    "flow-bin": "^0.91.0",
     "history": "^4.7.2",
     "react": "^16.8.0-alpha.0",
     "react-dom": "^16.8.0-alpha.0",
