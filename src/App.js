@@ -5,15 +5,11 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import * as routing from './containers/routing/actions'
 
-import logo from './logo.svg'
 import './App.css'
 
 const App = ({route, actions}) => {
     return (
         <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
-            </header>
             {renderRoutes(route.routes, {actions})}
         </div>
     )
