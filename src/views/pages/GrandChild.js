@@ -1,10 +1,10 @@
 import React from 'react'
 
+import BorderedPanel from '../organisms/BorderedPanel'
+
 const GrandChild = ({route, match: {params: {id}}}) => {
     return (
-        <div style={{border: '1px solid', padding: '5px', margin: '3px'}}>
-            Grand Child {id}
-        </div>
+        <BorderedPanel title={`Grand Child ${id}`}/>
     )
 }
 

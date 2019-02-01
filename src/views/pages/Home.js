@@ -1,7 +1,7 @@
 import React from 'react'
 
-import LinkList from '../molecules/LinkList'
 import BasicLayout from '../templates/BasicLayout'
+import BorderedLinkListPanel from '../organisms/BorderedLinkListPanel'
 
 const Home = ({route, actions}) => {
     const links = [
@@ -14,10 +14,7 @@ const Home = ({route, actions}) => {
     ]
     return (
         <BasicLayout>
-            <div style={{border: '1px solid', padding: '3px', margin: '3px'}}>
-                Home
-                <LinkList links={links} actions={actions}/>
-            </div>
+            <BorderedLinkListPanel title={'Home'} links={links} actions={actions}/>
         </BasicLayout>
     )
 }

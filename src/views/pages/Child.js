@@ -1,8 +1,8 @@
 import React from 'react'
 import {renderRoutes} from 'react-router-config'
 
-import LinkList from '../molecules/LinkList'
 import BasicLayout from '../templates/BasicLayout'
+import BorderedLinkListPanel from '../organisms/BorderedLinkListPanel'
 
 const Child = ({route, match: {params: {id}}, actions}) => {
     const links = [
@@ -10,11 +10,9 @@ const Child = ({route, match: {params: {id}}, actions}) => {
     ]
     return (
         <BasicLayout>
-            <div style={{border: '1px solid', padding: '5px', margin: '3px'}}>
-                Child {id}
+            <BorderedLinkListPanel title={`Child ${id}`} links={links} actions={actions}>
                 {renderRoutes(route.routes)}
-                <LinkList links={links} actions={actions}/>
-            </div>
+            </BorderedLinkListPanel>
         </BasicLayout>
     )
 }
