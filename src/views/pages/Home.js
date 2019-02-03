@@ -2,8 +2,9 @@ import React from 'react'
 
 import BasicLayout from '../templates/BasicLayout'
 import BorderedLinkListPanel from '../organisms/BorderedLinkListPanel'
+import CounterPanel from '../organisms/CounterPanel'
 
-const Home = ({route, actions}) => {
+const Home = ({route, state, actions}) => {
     const links = [
         {to: '/child/1', label: 'child 1'},
         {to: '/child/1/grand-child', label: 'grand child 1'},
@@ -15,6 +16,7 @@ const Home = ({route, actions}) => {
     return (
         <BasicLayout>
             <BorderedLinkListPanel title={'Home'} links={links} actions={actions}/>
+            <CounterPanel state={state} actions={actions}/>
         </BasicLayout>
     )
 }
