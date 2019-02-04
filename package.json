@@ -26,6 +26,7 @@
     "history": "^4.7.2",
     "react": "^16.8.0-alpha.0",
     "react-dom": "^16.8.0-alpha.0",
+    "react-intl": "^2.8.0",
     "react-redux": "^6.0.0",
     "react-router-config": "^4.4.0-beta.6",
     "react-router-dom": "^4.3.1",
