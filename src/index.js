@@ -5,6 +5,8 @@ import {HashRouter} from 'react-router-dom'
 import {renderRoutes} from 'react-router-config'
 import history from './history'
 
+import {IntlProvider} from 'react-intl'
+
 import {Provider} from 'react-redux'
 import store from './store'
 import routes from './routes'
@@ -15,11 +17,13 @@ import * as serviceWorker from './serviceWorker'
 
 const renderer = (location) => {
     ReactDOM.render(
-        <Provider store={store}>
-            <HashRouter>
-                {renderRoutes(routes)}
-            </HashRouter>
-        </Provider>,
+        <IntlProvider locale="en">
+            <Provider store={store}>
+                <HashRouter>
+                    {renderRoutes(routes)}
+                </HashRouter>
+            </Provider>
+        </IntlProvider>,
         document.getElementById('root')
     )
 }

@@ -1,10 +1,18 @@
 import React from 'react'
+import {defineMessages, injectIntl} from 'react-intl'
 
 import BasicLayout from '../templates/BasicLayout'
 import BorderedLinkListPanel from '../organisms/BorderedLinkListPanel'
 import CounterPanel from '../organisms/CounterPanel'
 
-const Home = ({route, state, actions}) => {
+const messages = defineMessages({
+    title: {
+        id: 'views.pages.Home.title',
+        defaultMessage: 'Home'
+    }
+})
+
+const Home = ({route, state, actions, intl: {formatMessage}}) => {
     const links = [
         {to: '/child/1', label: 'child 1'},
         {to: '/child/1/grand-child', label: 'grand child 1'},
@@ -15,10 +23,10 @@ const Home = ({route, state, actions}) => {
     ]
     return (
         <BasicLayout>
-            <BorderedLinkListPanel title={'Home'} links={links} actions={actions}/>
+            <BorderedLinkListPanel title={formatMessage(messages.title)} links={links} actions={actions}/>
             <CounterPanel state={state} actions={actions}/>
         </BasicLayout>
     )
 }
 
-export default Home
+export default injectIntl(Home)
