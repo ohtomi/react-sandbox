@@ -1,0 +1,17 @@
+[
+  {
+    "id": "views.pages.Child.title",
+    "defaultMessage": "Child {id}",
+    "filepath": "src/views/pages/Child.js"
+  },
+  {
+    "id": "views.pages.GrandChild.title",
+    "defaultMessage": "Grand Child {id}",
+    "filepath": "src/views/pages/GrandChild.js"
+  },
+  {
+    "id": "views.pages.Home.title",
+    "defaultMessage": "Home",
+    "filepath": "src/views/pages/Home.js"
+  }
+]
