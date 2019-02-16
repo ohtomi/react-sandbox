@@ -1,11 +1,7 @@
 import {combineReducers} from 'redux'
 import * as ActionType from '../../actions'
 
-const initialState = {
-    value: 0
-}
-
-const value = (state = initialState.value, action) => {
+const value = (state = 0, action) => {
     switch (action.type) {
         case ActionType.INCREMENT:
             return state + 1
