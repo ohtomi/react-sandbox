@@ -4,7 +4,7 @@ import * as ActionType from '../../actions'
 const pathname = (state = '/', action) => {
     switch (action.type) {
         case ActionType.CHANGE_LOCATION:
-            return action.payload.pathname
+            return action.payload.pathname || null
         default:
             return state
     }
@@ -13,7 +13,7 @@ const pathname = (state = '/', action) => {
 const search = (state = '', action) => {
     switch (action.type) {
         case ActionType.CHANGE_LOCATION:
-            return action.payload.search
+            return action.payload.search || null
         default:
             return state
     }
@@ -22,7 +22,7 @@ const search = (state = '', action) => {
 const hash = (state = '', action) => {
     switch (action.type) {
         case ActionType.CHANGE_LOCATION:
-            return action.payload.hash
+            return action.payload.hash || null
         default:
             return state
     }
