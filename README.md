@@ -15,12 +15,16 @@ This is a repository of `React` sandbox.
 #
 # Build application
 #
+$ npm test
+...
 $ npm run build
+...
 
 #
 # Run application
 #
 $ npm start
+...
 ```
 
 ## Contributing
