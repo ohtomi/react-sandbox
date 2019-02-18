@@ -15,7 +15,7 @@ This is a repository of `React` sandbox.
 #
 # Build application
 #
-$ npm test
+$ CI=true npm test
 ...
 $ npm run build
 ...
