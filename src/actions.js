@@ -7,3 +7,5 @@ export const CHANGE_LOCATION = 'CHANGE_LOCATION'
 
 export const INCREMENT = 'INCREMENT'
 export const DECREMENT = 'DECREMENT'
+
+export const SWITCH_LOCALE = 'SWITCH_LOCALE'

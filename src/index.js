@@ -5,7 +5,7 @@ import {HashRouter} from 'react-router-dom'
 import {renderRoutes} from 'react-router-config'
 import history from './history'
 
-import {IntlProvider, addLocaleData} from 'react-intl'
+import {addLocaleData, IntlProvider} from 'react-intl'
 import jaLocaleData from 'react-intl/locale-data/ja'
 import translations from './i18n/locales'
 
@@ -19,7 +19,7 @@ import * as serviceWorker from './serviceWorker'
 
 addLocaleData(jaLocaleData)
 
-const locale = 'en'
+const locale = store.getState().locale.name
 const messages = translations[locale]
 
 const renderer = (location) => {
