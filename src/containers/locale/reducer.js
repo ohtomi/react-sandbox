@@ -11,5 +11,5 @@ const name = (state = 'en', action) => {
 }
 
 export default combineReducers({
-    locale: name
+    name
 })
