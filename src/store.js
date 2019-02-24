@@ -1,6 +1,6 @@
 import {applyMiddleware, compose, createStore} from 'redux'
 import thunk from 'redux-thunk'
-import logger from 'redux-logger'
+import {createLogger} from 'redux-logger'
 import middleware from './middleware'
 import history from './history'
 import enhancer from './enhancer'
@@ -14,6 +14,9 @@ const initial = {
     }
 }
 
+const logger = createLogger({
+    collapsed: true
+})
 const store = createStore(reducers, initial, compose(applyMiddleware(middleware(history), thunk, logger), enhancer()))
 
 export default store
