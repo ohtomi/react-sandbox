@@ -1,17 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import {HashRouter} from 'react-router-dom'
-import {renderRoutes} from 'react-router-config'
-import history from './history'
-
 import {addLocaleData} from 'react-intl'
 import enLocaleData from 'react-intl/locale-data/en'
 import jaLocaleData from 'react-intl/locale-data/ja'
 
 import {Provider} from 'react-redux'
 import store from './store'
-import routes from './routes'
+
+import history from './history'
+import App from './App'
 
 import './index.css'
 
@@ -23,9 +21,7 @@ addLocaleData(jaLocaleData)
 const renderer = (location) => {
     ReactDOM.render(
         <Provider store={store}>
-            <HashRouter>
-                {renderRoutes(routes)}
-            </HashRouter>
+            <App/>
         </Provider>,
         document.getElementById('root')
     )
