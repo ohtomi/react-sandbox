@@ -4,6 +4,7 @@ import {defineMessages, injectIntl} from 'react-intl'
 import BasicLayout from '../templates/BasicLayout'
 import BorderedLinkListPanel from '../organisms/BorderedLinkListPanel'
 import CounterPanel from '../organisms/CounterPanel'
+import LocalePanel from '../organisms/LocalePanel'
 
 const messages = defineMessages({
     title: {
@@ -25,6 +26,7 @@ const Home = ({route, state, actions, intl: {formatMessage}}) => {
         <BasicLayout>
             <BorderedLinkListPanel title={formatMessage(messages.title)} links={links} actions={actions}/>
             <CounterPanel state={state} actions={actions}/>
+            <LocalePanel state={state} actions={actions}/>
         </BasicLayout>
     )
 }
