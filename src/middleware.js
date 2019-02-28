@@ -1,6 +1,6 @@
 import * as ActionType from './actions'
 
-export default (history) => () => (next) => (action) => {
+export const createMiddleware = (history) => () => (next) => (action) => {
     switch (action.type) {
         case ActionType.PUSH_HISTORY:
             history.push(action.payload.href)

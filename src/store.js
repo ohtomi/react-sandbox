@@ -1,22 +1,9 @@
-import {applyMiddleware, compose, createStore} from 'redux'
-import thunk from 'redux-thunk'
-import {createLogger} from 'redux-logger'
-import middleware from './middleware'
-import history from './history'
-import enhancer from './enhancer'
+import {createStore} from 'redux'
+
 import reducers from './reducers'
+import preloadedState from './preloadedState'
+import enhancer from './enhancer'
 
-const initial = {
-    routing: {
-        pathname: history.location.pathname,
-        search: history.location.search,
-        hash: history.location.search
-    }
-}
-
-const logger = createLogger({
-    collapsed: true
-})
-const store = createStore(reducers, initial, compose(applyMiddleware(middleware(history), thunk, logger), enhancer()))
+const store = createStore(reducers, preloadedState, enhancer)
 
 export default store
