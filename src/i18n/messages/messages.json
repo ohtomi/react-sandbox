@@ -1,17 +1,17 @@
 [
   {
     "id": "views.pages.Child.title",
-    "defaultMessage": "Child {id}",
+    "defaultMessage": "views.pages.Child.title {id}",
     "filepath": "src/views/pages/Child.js"
   },
   {
     "id": "views.pages.GrandChild.title",
-    "defaultMessage": "Grand Child {id}",
+    "defaultMessage": "views.pages.GrandChild.title {id}",
     "filepath": "src/views/pages/GrandChild.js"
   },
   {
     "id": "views.pages.Home.title",
-    "defaultMessage": "Home",
+    "defaultMessage": "views.pages.Home.title",
     "filepath": "src/views/pages/Home.js"
   }
 ]
