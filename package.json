@@ -17,8 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "flow": "flow",
-    "extract:messages": "react-intl-cra 'src/**/*.{js,jsx}' -o 'src/i18n/messages/messages.json'",
-    "manage:translations": "node ./translationRunner.js",
+    "i18n:extract": "react-intl-cra 'src/**/*.{js,jsx}' -o 'src/i18n/messages/messages.json'",
+    "i18n:translate": "node ./translationRunner.js",
     "eject": "react-scripts eject"
   },
   "dependencies": {
