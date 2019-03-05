@@ -13,6 +13,18 @@ This is a repository of `React` sandbox.
 
 ```console
 #
+# Translate message resources
+#
+$ npm run i18n:extract
+...
+$ ls -la src/i18n/messages/
+...
+$ npm run i18n:translate
+...
+$ ls -la src/i18n/locales/
+...
+
+#
 # Build application
 #
 $ CI=true npm test
