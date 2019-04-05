@@ -1,5 +1,0 @@
-{
-  "views.pages.Child.title": "子 {id}",
-  "views.pages.GrandChild.title": "孫 {id}",
-  "views.pages.Home.title": "ホーム"
-}

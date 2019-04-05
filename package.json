@@ -1,54 +1,30 @@
 {
   "name": "@ohtomi/react-sandbox",
   "version": "0.1.0",
-  "description": "This is a repository of React sandbox.",
-  "homepage": ".",
-  "bugs": {
-    "url": "https://github.com/ohtomi/react-sandbox/issues"
-  },
-  "license": "MIT",
-  "author": "Kenichi Ohtomi",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ohtomi/react-sandbox.git"
+  "private": true,
+  "dependencies": {
+    "@types/jest": "24.0.11",
+    "@types/node": "11.13.0",
+    "@types/react": "16.8.12",
+    "@types/react-dom": "16.8.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "2.1.8",
+    "typescript": "3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "flow": "flow",
-    "i18n:extract": "react-intl-cra 'src/**/*.{js,jsx}' -o 'src/i18n/messages/messages.json'",
-    "i18n:translate": "node ./translationRunner.js",
     "eject": "react-scripts eject"
   },
-  "dependencies": {
-    "babel-core": "^7.0.0-bridge.0",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.11.2",
-    "flow-bin": "^0.96.0",
-    "history": "^4.7.2",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "react-intl": "^2.8.0",
-    "react-intl-cra": "^0.3.4",
-    "react-intl-translations-manager": "^5.0.3",
-    "react-redux": "^6.0.1",
-    "react-router-config": "^5.0.0",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8",
-    "react-test-renderer": "^16.8.3",
-    "redux": "^4.0.1",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "private": true,
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "eslintConfig": {
-    "extends": "react-app"
-  }
+  ]
 }
